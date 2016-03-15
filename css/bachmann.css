@@ -1,0 +1,353 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #1A1917;
+}
+
+h1 {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-size: 110px;
+  line-height: 110px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  text-align: center;
+  animation: scaleIn 1s;
+}
+
+h2 {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Karla", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+a {
+  display: block;
+  text-align: center;
+  font-family: "Karla", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  text-align: center;
+  padding: 30px 0 100px 0;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 1);
+  transition: 0.1s;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #156E62;
+  font-size: 18px;
+  line-height: 26px;
+  animation: fadeIn 0.8s;
+}
+
+#output {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 50px;
+}
+
+.body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.hero {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background: url("../img/siliconvalley.jpg") no-repeat;
+  background-size: cover;
+  background-position: left;
+  padding: 30px;
+}
+
+.main {
+  flex: 1.25;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: scroll;
+}
+
+#select-style {
+  background: url("../img/caret.svg") no-repeat right 14px center;
+  border: 1px solid #C7C7C7;
+  width: 210px;
+  height: 40px;
+  padding: 0;
+  margin: 0 auto 40px auto;
+}
+
+#select-style:hover {
+  border-color: #1A1917;
+  transition: 0.2s;
+}
+
+#select-style select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding-left: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  text-transform: uppercase;
+  font-family: Karla, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: -webkit-min-content;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  background: #FFF;
+  padding: 100px 100px 0 100px;
+}
+
+.box div {
+    width: 100%;
+}
+
+#divider {
+  height: 2px;
+  width: 80px;
+  background: #1A1917;
+  display: block;
+  margin: 40px auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: scale(.97);
+  }
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*Tall screens*/
+@media (min-height: 1100px) {
+  .hero {
+    max-width: none;
+    transition: 0.2s;
+  }
+}
+
+@media (min-width: 1450px) and (min-height: 1100px) {
+  h1 {
+    font-size: 180px;
+    line-height: 180px;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1700px) and (min-height: 1100px) {
+  h1 {
+    font-size: 140px;
+    line-height: 140px;
+    transition: 0.2s;
+  }
+  .hero {
+    background-position: -100px 0;
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1100px) {
+  body h1 {
+    font-size: 120px;
+    line-height: 120px;
+    transition: 0.2s;
+  }
+  .main {
+    flex: 0.75;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1000px) and (min-height: 1100px) {
+  body .hero {
+    background-position: -120px 0;
+  }
+}
+
+@media (max-width: 800px) and (min-height: 1100px) {
+  body h1 {
+    font-size: 100px;
+    line-height: 100px;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 700px) and (min-height: 1100px) {
+  body .hero {
+    max-height: 800px;
+    background-position: center;
+  }
+}
+
+@media (max-width: 500px) and (min-height: 1100px) {
+  body h1 {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+
+/*Short screens*/
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 100px;
+    line-height: 100px;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1060px) {
+  .box {
+    padding: 100px 60px;
+  }
+}
+
+@media (max-width: 970px) {
+  h1 {
+    font-size: 90px;
+    line-height: 90px;
+    transition: 0.2s;
+  }
+  .hero {
+    background-position: -10px 0;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 840px) {
+  .hero {
+    background-position: -50px 0;
+    transition: 0.2s;
+  }
+  h1 {
+    font-size: 70px;
+    line-height: 70px;
+    transition: 0.2s;
+  }
+  .box {
+    padding: 100px 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .body {
+    display: block;
+  }
+  .hero {
+    max-width: none;
+    height: 100vh;
+    background-position: center;
+    transition: 0.2s;
+  }
+  h1 {
+    font-size: 110px;
+    line-height: 110px;
+  }
+  .box {
+    padding: 50px 100px;
+  }
+}
+
+@media (max-width: 490px) {
+  .hero {
+    background-position: -20px 0;
+    transition: 0.2s;
+  }
+  h1 {
+    font-size: 90px;
+    line-height: 90px;
+    transition: 0.2s;
+  }
+  .box {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    background-position: -50px 0;
+    transition: 0.2s;
+  }
+  h1 {
+    font-size: 70px;
+    line-height: 70px;
+    transition: 0.2s;
+  }
+  .box {
+    padding: 30px;
+  }
+  .hero {
+    background-position: left;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    background-position: left;
+    transition: 0.2s;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+    transition: 0.2s;
+  }
+}
